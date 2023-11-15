@@ -17,7 +17,8 @@ class AirlineFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake('hu_HU')->name(),
+            'country' => fake('hu_HU')->country(),
         ];
     }
 }
