@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('evaluation');
             $table
             ->foreignId('flight_id')
+            ->nullable()
             ->references('flight_id')
-            ->on('flights');
+            ->on('flights')
+            ->nullOnDelete();
             $table
             ->foreignId('user_id')
             ->references('id')

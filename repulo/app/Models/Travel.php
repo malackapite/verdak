@@ -16,4 +16,8 @@ class Travel extends Model
         'flight_id',
         'user_id'
     ];
+
+    public function flight(){
+        return $this->hasMany(Flight::class, 'airline_id', 'flight_id');
+    }
 }
